@@ -48,7 +48,7 @@
      background: #005B04;
     }
     body{
-      background: #B131A6B7;
+      background: pink;
     }
     .home{
   width: 40px;
@@ -70,15 +70,39 @@
 .home:active{
   border-radius: 15px;
 }
+p{
+  position: absolute;
+  right: 0px;
+  top: 42vh;
+  left: 15px;
+  border: none;
+  color: black;
+  text-align: center;
+  font-size: 2em;
+  font-weight: bold;
+  
+}
     </style>
   </head>
   <body>
     <a href="https://tahsun1462.github.io/HOME/"><button class="home"><ion-icon name="home"></ion-icon></button></a>
     <div class="container">
-    <input type="checkbox" id="check"/>
+    <p id="test">OFF</p>
+    <input type="checkbox" id="check" onclick="test()">
     <label for="check" class="button"></label>
     </div>
     <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
    <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+   <script>
+     let on = document.getElementById('check');
+let check = document.getElementById('test');
+function test() {
+  if (on.checked) {
+    check.textContent = "ON"
+  }else{
+    check.textContent = "OFF"
+  }
+}
+   </script>
   </body>
 </html>
