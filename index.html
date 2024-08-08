@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title></title>
+    <style>
+    *{
+      padding: 0px;
+      margin: 0px;
+    }
+    .container{
+      width: 100%;
+      height: 100vh;
+      background: #fff1;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+    .button{
+      width: 200px;
+      height: 100px;
+      background: #ff3421;
+      border-radius: 100px;
+      cursor: pointer;
+      position: relative;
+    }
+    .button::before{
+      position: absolute;
+      content: '';
+      width: 80px;
+      height: 80px;
+      border-radius: 45px;
+      background: #9C0D00;
+      margin: 10px;
+      transition: 0.5s;
+    }
+    input{
+      position: relative;
+      left: 200px;
+    }
+    input:checked + .button{
+      background: #009C07;
+      transition: 0.5s;
+    }
+    input:checked + .button:before{
+     transform: translateX(100px);
+     background: #005B04;
+    }
+    body{
+      background: #B131A6B7;
+    }
+    .home{
+  width: 40px;
+  height: 40px;
+  position: relative;
+  left: 0px;
+  margin-bottom: 10px;
+  background: #DC2626;
+  color: white;
+  border-radius: 10px;
+  transition: 0.2s;
+  border: solid 1px black;
+  margin-top: 5px;
+  margin-left: 5px;
+}
+.home:hover{
+  border-radius: 12px;
+}
+.home:active{
+  border-radius: 15px;
+}
+    </style>
+  </head>
+  <body>
+    <a href="https://tahsun1462.github.io/HOME/"><button class="home"><ion-icon name="home"></ion-icon></button></a>
+    <div class="container">
+    <input type="checkbox" id="check"/>
+    <label for="check" class="button"></label>
+    </div>
+    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+   <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+  </body>
+</html>
